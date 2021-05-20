@@ -1,0 +1,148 @@
+/* eslint-disable max-len */
+const colors = require('tailwindcss/colors');
+
+module.exports = {
+  important: true,
+  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
+  theme: {
+    screens: {
+      's': '640px',
+      'm': '767px',
+      'l': '992px',
+      'xl': '1024px',
+      'xxl': '1280px',
+      'xxxl': '1536px',
+    },
+    fontFamily: {
+      sans: [
+        'Inter',
+        'system-ui',
+        '-apple-system',
+        'BlinkMacSystemFont',
+        '"Segoe UI"',
+        'Roboto',
+        '"Helvetica Neue"',
+        '"Noto Sans"',
+        'sans-serif',
+        '"Apple Color Emoji"',
+        '"Segoe UI Emoji"',
+        '"Segoe UI Symbol"',
+        '"Noto Color Emoji"',
+      ],
+    },
+    colors: {
+      transparent: 'transparent',
+      current: 'currentColor',
+      black: colors.black,
+      white: colors.white,
+      gray: colors.trueGray,
+      blue: colors.blue,
+      indigo: colors.indigo,
+      purple: colors.purple,
+      pink: colors.pink,
+      red: colors.rose,
+      yellow: colors.amber,
+      green: colors.green,
+    },
+    boxShadow: {
+      '3xl': '0 35px 60px -15px rgba(0, 0, 0, 0.3)',
+      'inner-header': 'inset 0px -2px 0px 0px rgb(0, 0, 0)',
+    },
+    extend: {
+      spacing: {
+        '0.25': '0.0625rem',
+        '13': '3.25rem',
+        '15': '3.75rem',
+        '128': '32rem',
+        '144': '36rem',
+      },
+      zIndex: {
+        '-20': '-20',
+        '-10': '-10',
+        '100': '100',
+        '110': '110',
+        '120': '120',
+        '130': '130',
+        '140': '140',
+        '150': '150',
+        '800': '800',
+      },
+      scale: {
+        '0': '0',
+        '25': '.25',
+        '30': '.30',
+        '40': '.40',
+        '60': '.60',
+        '200': '2',
+        '300': '3',
+        '400': '4',
+        '500': '5',
+      },
+      gridTemplateColumns: {
+        '5-auto': 'repeat(5, minmax(0, auto))',
+      },
+      transitionDuration: {
+        '0': '0ms',
+      },
+      transitionDelay: {
+        '0': '0ms',
+      },
+      maxWidth: {
+        '8xl': '1920px',
+      },
+      colors: {
+        'primary': 'var(--primary)',
+        'primary-2': 'var(--primary-2)',
+        'secondary': 'var(--secondary)',
+        'secondary-2': 'var(--secondary-2)',
+        'hover': 'var(--hover)',
+        'hover-1': 'var(--hover-1)',
+        'hover-2': 'var(--hover-2)',
+        'accents-0': 'var(--accents-0)',
+        'accents-1': 'var(--accents-1)',
+        'accents-2': 'var(--accents-2)',
+        'accents-3': 'var(--accents-3)',
+        'accents-4': 'var(--accents-4)',
+        'accents-5': 'var(--accents-5)',
+        'accents-6': 'var(--accents-6)',
+        'accents-7': 'var(--accents-7)',
+        'accents-8': 'var(--accents-8)',
+        'accents-9': 'var(--accents-9)',
+        'violet': 'var(--violet)',
+        'violet-light': 'var(--violet-light)',
+        'pink': 'var(--pink)',
+        'cyan': 'var(--cyan)',
+        'blue': 'var(--blue)',
+        'green': 'var(--green)',
+      },
+      textColor: {
+        base: 'var(--text-base)',
+        primary: 'var(--text-primary)',
+        secondary: 'var(--text-secondary)',
+      },
+      boxShadow: {
+        'outline-2': '0 0 0 2px var(--accents-2)',
+        'magical':
+          'rgba(0, 0, 0, 0.02) 0px 30px 30px, rgba(0, 0, 0, 0.03) 0px 0px 8px, rgba(0, 0, 0, 0.05) 0px 1px 0px',
+      },
+      lineHeight: {
+        'extra-loose': '2.2',
+      },
+      letterSpacing: {
+        widest: '0.3em',
+      },
+    },
+  },
+  variants: {
+    extend: {
+      visibility: ['hover', 'group-hover'],
+      borderWidth: ['hover', 'group-hover', 'focus'],
+    },
+  },
+  plugins: [
+    require('precss'),
+    require('@tailwindcss/typography'),
+    require('tailwindcss-padding-safe')(),
+    require('tailwindcss-margin-safe')(),
+  ],
+};
