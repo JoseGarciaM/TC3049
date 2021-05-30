@@ -1,10 +1,10 @@
 {
   "root": true,
   "project": {
-    "name": "tc3049"
+    "name": "squizzy"
   },
   "api": {
-    "projectId": "bl468k7z",
+    "projectId": "puj7p168",
     "dataset": "production"
   },
   "plugins": [
@@ -13,19 +13,22 @@
     "@sanity/default-layout",
     "@sanity/default-login",
     "@sanity/desk-tool",
-    "barcode-input"
+    "quiz-match",
+    "asset-source-unsplash"
   ],
   "env": {
     "development": {
-      "plugins": [
-        "@sanity/vision"
-      ]
+      "plugins": ["@sanity/vision"]
     }
   },
   "parts": [
     {
       "name": "part:@sanity/base/schema",
-      "path": "./schemas/schema"
+      "path": "./schemas/schema.js"
+    },
+    {
+      "implements": "part:@sanity/base/theme/variables/override-style",
+      "path": "./squizzyTheme.css"
     }
   ]
 }
