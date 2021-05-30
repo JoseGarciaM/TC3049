@@ -1,10 +1,10 @@
 {
   "root": true,
   "project": {
-    "name": "squizzy"
+    "name": "tc3049"
   },
   "api": {
-    "projectId": "puj7p168",
+    "projectId": "bl468k7z",
     "dataset": "production"
   },
   "plugins": [
