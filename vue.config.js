@@ -2,8 +2,13 @@ module.exports = {
   css: {
     loaderOptions: {
       sass: {
-        prependData: `@import "@/styles/_variables.sass";`
+        data: `@import "@/styles/_variables.sass";`
       }
     }
   }
 }
+
+
+
+
+

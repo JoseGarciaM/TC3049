@@ -1,19 +1,19 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import store from '../store'
-import Home from '../views/Home'
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+import store from '../store';
+import Home from '../views/Home';
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const routes = [
   {
     path: '*',
-    redirect: '/'
+    redirect: '/',
   },
   {
     path: '/',
     name: 'home',
-    component: Home
+    component: Home,
   },
   {
     path: '/match/:slug',
@@ -21,27 +21,27 @@ const routes = [
     component: () => import(/* webpackChunkName: "match" */ '../views/Match.vue'),
     async beforeEnter(to, from, next) {
       try {
-        const isMatch = await store.dispatch('client/getMatchDetails', to.params.slug)
-        isMatch
-          ? next()
-          : next({
-              name: 'home',
-              params: {
-                title: 'Match not found!',
-                subtitle: 'Please scan another QR code to try again.'
-              }
-            })
+        const isMatch = await store.dispatch('client/getMatchDetails', to.params.slug);
+        isMatch ?
+          next() :
+          next({
+            name: 'home',
+            params: {
+              title: 'Match not found!',
+              subtitle: 'Please scan another QR code to try again.',
+            },
+          });
       } catch (error) {
         console.error(error) // eslint-disable-line
       }
-    }
-  }
-]
+    },
+  },
+];
 
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
-  routes
-})
+  routes,
+});
 
-export default router
+export default router;
