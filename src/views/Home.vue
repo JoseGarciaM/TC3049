@@ -19,9 +19,9 @@ export default {
   },
   data() {
     return {
-      title: 'Welcome to Squizzy!',
+      title: 'Welcome to Knowledge Rally!',
       subtitle: 'To play, find a QR code to scan or a URL to follow',
-      status: 'Powered by Sanity',
+      status: 'Made by Jose Garcia, Carlos de la Garza and Jesus Christ',
       expression: {mouth: 'happy'}
     }
   },
