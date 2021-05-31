@@ -80,7 +80,7 @@ export default {
       if (!player)
         return {
           name: 'register',
-          title: `Squizzy time!`,
+          title: `Rally time!`,
           status: `Joining: ${title}`,
           expression: {eyes: 'happy', mouth: 'default'}
         }
