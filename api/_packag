@@ -13,11 +13,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@sanity/client": "^2.10.5",
+    "@sanity/client": "^0.142.6",
     "micro": "^9.3.4",
     "micro-cors": "^0.1.1",
     "micro-query": "^0.3.0",
-    "nanoid": "^3.1.23",
+    "nanoid": "^2.1.7",
     "now": "^16.7.0"
   }
 }
