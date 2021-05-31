@@ -1,7 +1,7 @@
 export default {
   localWebHost: 'http://localhost:3000',
   localApiHost: 'http://localhost:3000',
-  remoteWebHost: '<your-app-name>.now.sh',
+  remoteWebHost: 'https://tc-3049.vercel.app',
   match: {
     correctAnswerScore: 100,
     firstAnswerScore: 50
